@@ -1,0 +1,16 @@
+const axios = require("axios");
+
+const options = {
+  method: 'GET',
+  url: 'https://lihcode-lufthansa-open-new-v1.p.rapidapi.com/v1/cargo/getRoute/%7Borigin%7D-%7Bdestination%7D/%7Bfromdate%7D/%7Bproductcode%7D',
+  headers: {
+    'X-RapidAPI-Key': 'd19d72431bmsh0c08edaf4999566p11d40cjsnf38c4f3ea22b',
+    'X-RapidAPI-Host': 'lihcode-lufthansa-open-new-v1.p.rapidapi.com'
+  }
+};
+
+axios.request(options).then(function (response) {
+	console.log(response.data);
+}).catch(function (error) {
+	console.error(error);
+});
